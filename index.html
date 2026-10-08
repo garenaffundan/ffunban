@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire ID Unban</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e9e9e9;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 25px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: #e60000;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        .label-upload span {
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d1d1;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #333;
+            outline: none;
+            background-color: #fff;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #888;
+        }
+
+        input[type="text"]::placeholder {
+            color: #a0a0a0;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            color: #333;
+        }
+
+        .file-upload-wrapper {
+            border: 1px solid #d1d1d1;
+            border-radius: 8px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        input[type="file"] {
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        input[type="file"]::file-selector-button {
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            color: #333;
+            cursor: pointer;
+            margin-right: 10px;
+            font-weight: normal;
+        }
+
+        /* पेमेंट सेक्शन */
+        .payment-section {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fafafa;
+            margin-bottom: 20px;
+        }
+
+        .payment-section h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .price-tag {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008a00;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #008a00;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #007000;
+        }
+
+        .pay-btn {
+            background-color: #007bff;
+        }
+        .pay-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .payment-modal { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.65); padding:18px; align-items:center; justify-content:center; }
+        .payment-modal.show { display:flex; }
+        .payment-box { width:100%; max-width:390px; max-height:92vh; overflow:auto; background:#fff; border-radius:14px; padding:20px; text-align:center; }
+        .payment-box h2 { font-size:23px; margin:0 0 8px; color:#222; }
+        .payment-amount { color:#008a00; font-size:28px; font-weight:800; margin:8px 0 12px; }
+        #qrCode { display:flex; justify-content:center; margin:10px auto 14px; }
+        #qrCode img, #qrCode canvas { max-width:100%; height:auto; }
+        .upi-label { font-size:14px; overflow-wrap:anywhere; margin-bottom:10px; font-weight:600; }
+        .payment-note { font-size:14px; line-height:1.45; color:#555; margin:10px 0 14px; }
+        .green-btn, .close-btn { width:100%; padding:13px; border:0; border-radius:7px; font-size:17px; font-weight:700; cursor:pointer; }
+        .green-btn { background:#008a00; color:#fff; }
+        .close-btn { margin-top:9px; background:#eee; color:#222; }
+        #successState { display:none; }
+        .success-icon { width:72px; height:72px; border-radius:50%; background:#159447; color:white; font-size:46px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:12px auto; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Free Fire ID Unban</h1>
+        
+        <form action="#" method="POST">
+            <!-- Account UID -->
+            <div class="form-group">
+                <label for="uid">Account UID</label>
+                <input type="text" id="uid" placeholder="Enter your Free Fire UID" required>
+            </div>
+
+            <!-- Account Nickname -->
+            <div class="form-group">
+                <label for="nickname">Account Nickname</label>
+                <input type="text" id="nickname" placeholder="Enter your Free Fire Nickname" required>
+            </div>
+
+            <!-- Your Device (स्क्रीनशॉट के अनुसार अपडेटेड) -->
+            <div class="form-group">
+                <label for="device">Your Device</label>
+                <select id="device" required>
+                    <option value="" disabled selected hidden>Choose your Device</option>
+                    <option value="android">Android</option>
+                    <option value="ios">iOS</option>
+                    <option value="pc">PC (Emulator)</option>
+                </select>
+            </div>
+
+            <!-- Server/Region (स्क्रीनशॉट के अनुसार अपडेटेड) -->
+            <div class="form-group">
+                <label for="server">Server/Region</label>
+                <select id="server" required>
+                    <option value="" disabled selected hidden>Select your Server</option>
+                    <option value="india">India</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="mena">Middle East (MENA)</option>
+                    <option value="latam">Mexico (LATAM)</option>
+                    <option value="taiwan">Taiwan</option>
+                    <option value="russia">Russia</option>
+                    <option value="europe">Europe</option>
+                    <option value="indonesia">Indonesia</option>
+                    <option value="malaysia">Malaysia</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="bangladesh">Bangladesh</option>
+                </select>
+            </div>
+
+            <!-- Reason for Ban (स्क्रीनशॉट के अनुसार अपडेटेड) -->
+            <div class="form-group">
+                <label for="reason">Reason for Ban</label>
+                <select id="reason" required>
+                    <option value="" disabled selected hidden>Select Reason for Ban</option>
+                    <option value="hacking">I used hacking</option>
+                    <option value="abuse">I did verbal abuse</option>
+                    <option value="friend">My friend took my Free Fire ID and used it to cheat, which got it banned</option>
+                    <option value="hacked">An unknown person hacked my Free Fire ID and used it to cheat, which got it banned</option>
+                    <option value="unknown">I don't know anything about how my ID got banned</option>
+                </select>
+            </div>
+
+            <!-- ID Level -->
+            <div class="form-group">
+                <label for="level">ID Level</label>
+                <input type="text" id="level" placeholder="Your Free Fire ID Level" required>
+            </div>
+
+            <!-- Upload Screenshot -->
+            <div class="form-group">
+                <label class="label-upload" for="screenshot">Upload Screenshot <span>(Screenshot of Ban Message)</span></label>
+                <div class="file-upload-wrapper">
+                    <input type="file" id="screenshot" accept="image/*" required>
+                </div>
+            </div>
+
+            <!-- Keep the original look: no amount/payment box before Proceed -->
+            <button type="submit" class="submit-btn" id="proceedBtn">Proceed</button>
+        </form>
+    </div>
+
+
+    <div class="payment-modal" id="paymentModal" aria-hidden="true">
+      <div class="payment-box">
+        <div id="paymentState">
+          <h2>Scan & Pay with UPI</h2>
+          <div class="payment-amount">₹299</div>
+          <div id="qrCode" aria-label="UPI QR code"></div>
+          <div class="upi-label">UPI ID: 6202949650@yesfam</div>
+          <div class="payment-note">PhonePe या किसी भी UPI ऐप से QR scan करके ₹299 pay करें। पेमेंट करने के बाद नीचे दबाएँ।</div>
+          <a id="upiPayLink" class="green-btn" style="display:block;text-decoration:none" href="upi://pay?pa=6202949650%40yesfam&pn=MR%20ROHIT%20KUMAR&am=299&cu=INR">Open UPI App</a>
+          <button type="button" class="green-btn" id="paidBtn" style="margin-top:9px">I Have Paid ₹299</button>
+          <button type="button" class="close-btn" id="closeBtn">Back to Form</button>
+        </div>
+        <div id="successState">
+          <div class="success-icon">✓</div>
+          <h2>Payment Submitted</h2>
+          <div class="payment-note">आपका payment confirmation submit हुआ है। यह static UPI QR है; payment अपने-आप verify नहीं हुआ है। पेमेंट की पुष्टि अपने बैंक/UPI ऐप में करें।</div>
+          <button type="button" class="close-btn" id="successCloseBtn">Close</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+      const form = document.querySelector('form');
+      const modal = document.getElementById('paymentModal');
+      const paymentState = document.getElementById('paymentState');
+      const successState = document.getElementById('successState');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden','false');
+        if (!document.getElementById('qrCode').hasChildNodes()) {
+          if (window.QRCode) new QRCode(document.getElementById('qrCode'), {
+            text: 'upi://pay?pa=6202949650@yesfam&pn=MR%20ROHIT%20KUMAR&am=299&cu=INR',
+            width: 260, height: 260, correctLevel: QRCode.CorrectLevel.M
+          });
+          else document.getElementById('qrCode').textContent = 'QR load नहीं हुआ। Open UPI App दबाएँ।';
+        }
+      });
+      function closeModal(){ modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); }
+      document.getElementById('closeBtn').addEventListener('click', closeModal);
+      document.getElementById('successCloseBtn').addEventListener('click', closeModal);
+      document.getElementById('paidBtn').addEventListener('click', function(){
+        paymentState.style.display='none'; successState.style.display='block';
+      });
+      modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+    </script>
+
+</body>
+</html>
